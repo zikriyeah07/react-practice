@@ -2,20 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-const Student = (props) => {
+const Student = ({ name = "Unknown", age = 0, grade = "Not-Available" }) => {
   return (
     <div className="student-box">
-      <h6 className="StudentName">Student Name: {props.name}</h6>
-      <p className="age-class">Age: {props.age}</p>
-      <p className="grade-class">Student Grade: {props.grade}</p>
+      <h6 className="StudentName">Student Name: {name}</h6>
+      <p className="age-class">Age: {age}</p>
+      <p className="grade-class">Student Grade: {grade}</p>
       <p className="hostel-class">
         Campus Placement:{" "}
-        {props.age >= 21
+        {age >= 21
           ? "Eligible for campus placement"
           : "Not eligible for campus placement"}
       </p>
       <p>
-        Is A Topper : {props.grade === "A" ? "Good Student" : "Average Student"}
+        Remarks : {grade.toUpperCase() === "A" ? "Good Student" : "Average Student"}
       </p>
     </div>
   );
@@ -26,5 +26,7 @@ Student.propTypes = {
   age: PropTypes.number,
   grade: PropTypes.string,
 };
+
+
 
 export default Student;

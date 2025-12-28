@@ -1,27 +1,73 @@
-.StudentName {
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 0%;
-  margin: 0%;
-}
-.age-class {
-  color: blue;
-}
+/* Root container */
 .student-box {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin: 20px auto;
+  max-width: 420px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  font-family: "Inter", "Poppins", system-ui, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Subtle hover effect */
+.student-box:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Student Name */
+.StudentName {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #1f2937; /* dark luxury gray */
+  margin: 0 0 8px 0;
+}
+
+/* Age */
+.age-class {
+  font-size: 0.95rem;
+  color: #6b7280; /* muted gray */
+  margin: 4px 0;
+}
+
+/* Grade */
 .grade-class {
-  color: green;
-  text-decoration: underline;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #065f46; /* deep emerald */
+  margin: 4px 0;
 }
+
+/* Campus placement */
 .hostel-class {
-  color: red;
-  font-style: italic;
-  text-decoration: solid;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-transform: capitalize;
-font-weight: 600;
-letter-spacing: 0.01vw;
+  color: #7c2d12; /* luxury brown-red */
+  opacity: 0.9;
+}
+
+/* Optional: Topper line */
+.student-box {
+  display: flex;
+  flex-direction: row; /* items side by side */
+  gap: 12px;
+  flex-wrap: wrap;     /* prevents overflow */
+
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin: 20px auto;
+  max-width: 420px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
